@@ -5,6 +5,7 @@ metadata:
 spec:
   template:
     spec:
+      serviceAccountName: argocd-sa
       volumes:
         - name: custom-tools
           emptyDir: {}

@@ -6,5 +6,8 @@ metadata:
 data:
   .sops.yaml: |
     creation_rules:
-      - kms: arn:aws:kms:us-east-1:723817280415:key/063faae2-e05e-415c-8174-b9f50af74cfa
-        encrypted_regex: '^(data|stringData)$'
+    key_groups:
+      - kms:
+          - arn: arn:aws:kms:us-east-1:723817280415:key/063faae2-e05e-415c-8174-b9f50af74cfa
+            role: arn:aws:iam::723817280415:role/eksinstancerole
+
