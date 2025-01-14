@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ovx-web
+spec:
+  template:
+    metadata:
+      labels:
+        app: ovx-web
+        environment: dev
+  selector:
+    matchLabels:
+      app: ovx-web
+      environment: dev
