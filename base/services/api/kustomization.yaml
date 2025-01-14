@@ -1,0 +1,3 @@
+resources:
+  - ovx-api-deployment.yml
+  - ovx-api-service.yml

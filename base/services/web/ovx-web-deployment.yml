@@ -15,11 +15,11 @@ spec:
         app: ovx-web
     spec:
       containers:
-      - name: ovx-web
-        image: amarht/web
-        ports:
-        - containerPort: 80
-        imagePullPolicy: Always
-        envFrom:
-        - configMapRef:
-            name: ovx-web-config
+        - name: ovx-web
+          image: amarht/web
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: ovx-web
