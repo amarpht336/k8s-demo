@@ -37,3 +37,5 @@ spec:
           env:
             - name: XDG_CONFIG_HOME
               value: /.config
+            - name: SOPS_KMS_KEY
+              value: arn:aws:kms:us-east-1:723817280415:key/063faae2-e05e-415c-8174-b9f50af74cfa
