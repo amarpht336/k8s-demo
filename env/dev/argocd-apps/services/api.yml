@@ -11,4 +11,3 @@ spec:
     path: env/dev/services/api
     repoURL: https://github.com/amarpht336/k8s-demo.git
     targetRevision: HEAD
-s
