@@ -1,23 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ovx-api
+  name: api
   labels:
-    app: ovx-api
+    app: api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ovx-api
+      app: api
   template:
     metadata:
       labels:
-        app: ovx-api
+        app: api
     spec:
       containers:
-      - name: ovx-api
+      - name: api
         image: amarht/api
         ports:
         - containerPort: 8000
-      imagePullSecrets:
-      - name: ecr-secret

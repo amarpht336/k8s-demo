@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ovx-api
+  name: api
 spec:
   template:
     metadata:
       labels:
-        app: ovx-api
+        app: api
         environment: dev
   selector:
     matchLabels:
-      app: ovx-api
+      app: api
       environment: dev

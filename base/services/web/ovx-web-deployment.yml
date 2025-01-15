@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ovx-web
+  name: web
   labels:
-    app: ovx-web
+    app: web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ovx-web
+      app: web
   template:
     metadata:
       labels:
-        app: ovx-web
+        app: web
     spec:
       containers:
-        - name: ovx-web
+        - name: web
           image: amarht/web
           ports:
             - containerPort: 80
           imagePullPolicy: Always
           envFrom:
             - secretRef:
-                name: ovx-web
+                name: web
